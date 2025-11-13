@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Motors - Your Trusted Car Dealer in Kenya</title>
+    
+    <!-- Google Fonts: Montserrat for headings, Open Sans for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Brandon Motors</a>
+                <!-- You could replace "Brandon Motors" with an image logo: <img src="path/to/logo.png" alt="Brandon Motors Logo"> -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cars.html">Cars for Sale</a></li>
+                    <li><a href="import-services.html">Car Import Services</a></li>
+                    <li><a href="finance-trade-in.html">Finance & Trade-In</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="header-social">
+                    <a href="https://facebook.com/brandonmotors" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/brandonmotors" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="contact.html" class="header-contact-btn">Contact Us</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Banner Section -->
+        <section class="hero-banner-container">
+            <div class="swiper-container hero-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=2070');"></div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=2070');"></div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1533106418989-88406e7cc8ca?q=80&w=2070');"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination hero-pagination"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Find Your Dream Car Today!</h1>
+                <p class="slogan">Kenya's Premier Destination for Quality Pre-Owned Vehicles.</p>
+                <div class="quick-search-bar">
+                    <form action="cars.html" method="GET">
+                        <input type="text" name="keyword" placeholder="Keyword (e.g. Toyota Prado)">
+                        <select name="brand" aria-label="Brand">
+                            <option value="">All Makes</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="mercedes-benz">Mercedes-Benz</option>
+                            <option value="bmw">BMW</option>
+                            <option value="subaru">Subaru</option>
+                            <option value="mazda">Mazda</option>
+                            <option value="land-rover">Land Rover</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="lexus">Lexus</option>
+                        </select>
+                        <select name="price_range" aria-label="Price Range">
+                            <option value="">Max Price</option>
+                            <option value="0-1m">KES 0 - 1,000,000</option>
+                            <option value="1m-2m">KES 1,000,000 - 2,000,000</option>
+                            <option value="2m-3m">KES 2,000,000 - 3,000,000</option>
+                            <option value="3m+">KES 3,000,000+</option>
+                        </select>
+                        <button type="submit" class="btn btn-search"><i class="fas fa-search"></i> Search</button>
+                    </form>
+                </div>
+                <div class="hero-buttons">
+                    <a href="cars.html" class="btn btn-primary">View All Cars</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Cars Section -->
+        <section class="featured-cars section-padding">
+            <div class="container">
+                <h2>Featured Vehicles</h2>
+                <!-- Swiper -->
+                <div class="swiper-container featured-cars-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="car-card">
+                                <a href="car-details.html?car=Toyota+RAV4+2018" class="car-link">
+                                    <div class="car-image-container">
+                                        <img src="https://i.pinimg.com/1200x/1f/8a/aa/1f8aaa5d4eb30df0e67766089e4af84d.jpg" alt="Toyota RAV4 2018" class="car-image">
+                                        <div class="status-tag available">Available</div>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3 class="car-model">Toyota RAV4 <span class="car-year">2018</span></h3>
+                                        <p class="car-price">KES 2,850,000</p>
+                                        <div class="car-specs">
+                                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 85,000 km</span>
+                                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</span>
+                                            <span class="spec-item"><i class="fas fa-cogs"></i> Automatic</span>
+                                        </div>
+                                        <button class="enquire-button">Quick Details</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="car-card sold">
+                                <a href="car-details.html?car=Nissan+X-Trail+2019" class="car-link">
+                                    <div class="car-image-container">
+                                        <img src="https://i.pinimg.com/1200x/84/02/f4/8402f46fc7fe34347e02841c10c07f95.jpg" alt="Nissan X-Trail 2019" class="car-image">
+                                        <div class="sold-banner">Sold</div>
+                                    <div class="car-details">
+                                        <h3 class="car-model">Nissan X-Trail <span class="car-year">2019</span></h3>
+                                        <p class="car-price">KES 2,500,000</p>
+                                        <div class="car-specs">
+                                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 70,000 km</span>
+                                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</span>
+                                            <span class="spec-item"><i class="fas fa-cogs"></i> Automatic</span>
+                                        </div>
+                                        <button class="enquire-button">Quick Details</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="car-card">
+                                <a href="car-details.html?car=Mercedes-Benz+C200+2017" class="car-link">
+                                    <div class="car-image-container">
+                                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070" alt="Mercedes C-Class sedan in a car lot" class="car-image">
+                                        <div class="status-tag available">Available</div>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3 class="car-model">Mercedes-Benz C200 <span class="car-year">2017</span></h3>
+                                        <p class="car-price">KES 3,800,000</p>
+                                        <div class="car-specs">
+                                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 60,000 km</span>
+                                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</span>
+                                            <span class="spec-item"><i class="fas fa-cogs"></i> Automatic</span>
+                                        </div>
+                                        <button class="enquire-button">Quick Details</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="car-card">
+                                <a href="car-details.html?car=Subaru+Forester+2016" class="car-link">
+                                    <div class="car-image-container">
+                                        <img src="https://i.pinimg.com/736x/91/5b/59/915b59092dba3aa5ec0515c9b8f54fc6.jpg" alt="Subaru Forester SUV on Kenyan road" class="car-image">
+                                        <div class="status-tag available">Available</div>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3 class="car-model">Subaru Forester <span class="car-year">2016</span></h3>
+                                        <p class="car-price">KES 2,100,000</p>
+                                        <div class="car-specs">
+                                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 95,000 km</span>
+                                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</span>
+                                            <span class="spec-item"><i class="fas fa-cogs"></i> Automatic</span>
+                                        </div>
+                                        <button class="enquire-button">Quick Details</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="car-card">
+                                <a href="car-details.html?car=Toyota+Hilux+2021" class="car-link">
+                                    <div class="car-image-container">
+                                        <img src="https://i.pinimg.com/736x/ad/4c/15/ad4c15850d649beec8c780ce2dfe04f6.jpg" alt="Toyota Hilux 2021" class="car-image">
+                                        <div class="status-tag available">Available</div>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3 class="car-model">Toyota Hilux <span class="car-year">2021</span></h3>
+                                        <p class="car-price">KES 4,500,000</p>
+                                        <div class="car-specs">
+                                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 45,000 km</span>
+                                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Diesel</span>
+                                            <span class="spec-item"><i class="fas fa-cogs"></i> Manual</span>
+                                        </div>
+                                        <button class="enquire-button">Quick Details</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                            <div class="car-card">
+                                <a href="car-details.html?car=BMW+7+Series+2020" class="car-link">
+                                    <div class="car-image-container">
+                                        <img src="https://i.pinimg.com/736x/34/fd/19/34fd19edb9c05f03241bac055235bcb2.jpg" alt="BMW 7 Series 2020" class="car-image">
+                                        <div class="status-tag available">Available</div>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3 class="car-model">BMW 7 Series <span class="car-year">2020</span></h3>
+                                        <p class="car-price">KES 7,200,000</p>
+                                        <div class="car-specs">
+                                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 30,000 km</span>
+                                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</span>
+                                            <span class="spec-item"><i class="fas fa-cogs"></i> Automatic</span>
+                                        </div>
+                                        <button class="enquire-button">Quick Details</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide">
+                            <div class="car-card">
+                                <a href="car-details.html?car=Volkswagen+Golf+2020" class="car-link">
+                                    <div class="car-image-container">
+                                        <img src="https://i.pinimg.com/1200x/aa/31/b5/aa31b5a9a12cc27f68635d9157d12b09.jpg" alt="Volkswagen Golf 2020" class="car-image">
+                                        <div class="status-tag available">Available</div>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3 class="car-model">Volkswagen Golf <span class="car-year">2020</span></h3>
+                                        <p class="car-price">KES 2,300,000</p>
+                                        <div class="car-specs">
+                                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 55,000 km</span>
+                                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</span>
+                                            <span class="spec-item"><i class="fas fa-cogs"></i> Automatic</span>
+                                        </div>
+                                        <button class="enquire-button">Quick Details</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="text-center mt-4">
+                    <a href="cars.html" class="btn btn-secondary">View All Cars</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us section-padding bg-light">
+            <div class="container">
+                <h2>Why Choose Brandon Motors?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-car-alt"></i></div>
+                        <h3>Quality Inspected Vehicles</h3>
+                        <p>Every car undergoes a rigorous inspection to ensure it meets our high standards of quality and reliability.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden fees. We believe in honest and transparent pricing to build lasting trust with our clients.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-headset"></i></div>
+                        <h3>Exceptional Service</h3>
+                        <p>Our dedicated team is here to guide you through every step of your car buying journey with expert advice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section-padding">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonial-card">
+                    <p>"The best car buying experience I've ever had. The team at Brandon Motors was professional, transparent, and helped me find the perfect car for my family. Highly recommended!"</p>
+                    <div class="author">- Jane W.</div>
+                </div>
+                <!-- In a real site, this would be a slider with multiple testimonials -->
+            </div>
+        </section>
+
+        <!-- Car Import Services Call to Action -->
+        <section class="import-cta section-padding">
+            <div class="container text-center">
+                <h2>Dreaming of a Specific Car?</h2>
+                <p>Brandon Motors helps you import your ideal vehicle from Japan, the UK, or South Africa with a seamless, step-by-step process.</p>
+                <a href="import-services.html" class="btn btn-primary">Explore Car Import Services</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Brandon Motors</h3>
+                    <p>Your Trusted Car Dealer in Kenya.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/brandonmotors" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/brandonmotors" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/brandonmotors" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars for Sale</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="import-services.html">Import Services</a></li>
+                        <li><a href="finance-trade-in.html">Finance & Trade-In</a></li>
+                        <li><a href="sell-your-car.html">Sell Your Car</a></li>
+                        <li><a href="admin.html">Admin</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Two Rivers, Northern Bypass</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:0799219777">0799219777</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:brandonkangethe@gmail.com">brandonkangethe@gmail.com</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254799219777" target="_blank">WhatsApp Chat</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Office Hours</h3>
+                    <p>Mon–Sat: 8am–6pm</p>
+                    <p>Sun: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">Copyright © 2025 Brandon Motors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254799219777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Swiper.js JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Custom JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

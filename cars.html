@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars for Sale - Brandon Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Brandon Motors</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cars.html">Cars for Sale</a></li>
+                    <li><a href="import-services.html">Car Import Services</a></li>
+                    <li><a href="finance-trade-in.html">Finance & Trade-In</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding">
+            <div class="page-header">
+                <h1>All Cars for Sale</h1>
+            </div>
+            <div class="container">
+                <!-- Filters and Sorting Bar -->
+                <div class="filters-sort-bar">
+                    <form>
+                        <select name="sort_by" aria-label="Sort By">
+                            <option value="">Sort By</option>
+                            <option value="price_asc">Price: Low to High</option>
+                            <option value="price_desc">Price: High to Low</option>
+                            <option value="newest">Newest Listings</option>
+                        </select>
+                        <select name="brand" aria-label="Filter by Brand">
+                            <option value="">All Brands</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="mercedes-benz">Mercedes-Benz</option>
+                            <option value="bmw">BMW</option>
+                            <option value="subaru">Subaru</option>
+                            <option value="land-rover">Land Rover</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="lexus">Lexus</option>
+                            <option value="volkswagen">Volkswagen</option>
+                            <option value="audi">Audi</option>
+                            <option value="honda">Honda</option>
+                            <option value="mazda">Mazda</option>
+                        </select>
+                        <select name="body_type" aria-label="Filter by Body Type">
+                            <option value="">All Body Types</option>
+                            <option value="suv">SUV</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="hatchback">Hatchback</option>
+                            <option value="pickup">Pickup</option>
+                        </select>
+                        <select name="price_range" aria-label="Price Range">
+                            <option value="">Price Range</option>
+                            <option value="0-1m">KES 0 - 1M</option>
+                            <option value="1m-2m">KES 1M - 2M</option>
+                            <option value="2m-3m">KES 2M - 3M</option>
+                            <option value="3m-5m">KES 3M - 5M</option>
+                            <option value="5m-10m">KES 5M - 10M</option>
+                            <option value="10m+">Above 10M</option>
+                        </select>
+                        <select name="year" aria-label="Year">
+                            <option value="">Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                        </select>
+                        <select name="condition" aria-label="Filter by Condition">
+                            <option value="">All Conditions</option>
+                            <option value="new">Brand New</option>
+                            <option value="used">Used</option>
+                        </select>
+                        <select name="fuel_type" aria-label="Fuel Type">
+                            <option value="">Fuel Type</option>
+                            <option value="petrol">Petrol</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="hybrid">Hybrid</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Apply Filters</button>
+                    </form>
+                </div>
+
+                <div class="car-grid">
+                    <!-- Car listings will be dynamically inserted here by JavaScript -->
+                    <p>Loading cars...</p>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-secondary">Load More Cars</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column"><h3>Brandon Motors</h3><p>Your Trusted Car Dealer in Kenya.</p><div class="social-links"><a href="https://facebook.com/brandonmotors" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com/brandonmotors" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com/brandonmotors" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
+                <div class="footer-column"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="cars.html">Cars for Sale</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="import-services.html">Import Services</a></li><li><a href="finance-trade-in.html">Finance & Trade-In</a></li><li><a href="sell-your-car.html">Sell Your Car</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+                <div class="footer-column"><h3>Contact Us</h3><p><i class="fas fa-map-marker-alt"></i> Two Rivers, Northern Bypass</p><p><i class="fas fa-phone"></i> <a href="tel:0799219777">0799219777</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:brandonkangethe@gmail.com">brandonkangethe@gmail.com</a></p><p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254799219777" target="_blank">WhatsApp Chat</a></p></div>
+                <div class="footer-column"><h3>Office Hours</h3><p>Mon–Sat: 8am–6pm</p><p>Sun: Closed</p></div>
+            </div>
+            <div class="footer-bottom"><p class="copyright">Copyright © 2025 Brandon Motors. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/254799219777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const API_BASE_URL = 'http://localhost:3000/api'; // Replace with your actual API URL
+            const carGrid = document.querySelector('.car-grid');
+
+            // Function to create a car card HTML element
+            function createCarCard(car) {
+                const carCard = document.createElement('div');
+                carCard.className = 'car-card';
+                if (car.status === 'Sold') {
+                    carCard.classList.add('sold');
+                }
+
+                // Use a placeholder if no image is available
+                const imageUrl = car.images && car.images.length > 0 ? car.images[0].image_url : 'images/placeholder.png';
+                const carFullName = `${car.make} ${car.model}`;
+
+                carCard.innerHTML = `
+                    <a href="car-details.html?id=${car.id}" class="car-link">
+                        <div class="car-image-container">
+                            <img src="${imageUrl}" alt="${carFullName}" class="car-image">
+                            ${car.status === 'Sold' ? '<div class="sold-banner">Sold</div>' : ''}
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-model">${carFullName} <span class="car-year">${car.year}</span></h3>
+                            <p class="car-price">KES ${new Intl.NumberFormat().format(car.price)}</p>
+                            <div class="car-specs">
+                                <span class="spec-item"><i class="fas fa-tachometer-alt"></i> ${car.mileage ? new Intl.NumberFormat().format(car.mileage) + ' km' : 'N/A'}</span>
+                                <span class="spec-item"><i class="fas fa-gas-pump"></i> ${car.fuel_type || 'N/A'}</span>
+                                <span class="spec-item"><i class="fas fa-cogs"></i> ${car.transmission}</span>
+                            </div>
+                            <button class="enquire-button">View Details</button>
+                        </div>
+                    </a>
+                `;
+                return carCard;
+            }
+
+            // Fetch all cars from the API
+            fetch(`${API_BASE_URL}/cars`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load car listings.');
+                    }
+                    return response.json();
+                })
+                .then(cars => {
+                    carGrid.innerHTML = ''; // Clear the "Loading..." message
+                    if (cars.length === 0) {
+                        carGrid.innerHTML = '<p>No cars available at the moment. Please check back later.</p>';
+                        return;
+                    }
+                    cars.forEach(car => {
+                        const carCardElement = createCarCard(car);
+                        carGrid.appendChild(carCardElement);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching cars:', error);
+                    carGrid.innerHTML = '<p>Could not load car listings. Please try refreshing the page.</p>';
+                });
+        });
+    </script>
+</body>
+</html>
+                    <div class="car-grid">
+                        <!-- Car listings will be dynamically inserted here by JavaScript -->
+                        <p>Loading cars...</p>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-secondary">Load More Cars</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column"><h3>Brandon Motors</h3><p>Your Trusted Car Dealer in Kenya.</p><div class="social-links"><a href="https://facebook.com/brandonmotors" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com/brandonmotors" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com/brandonmotors" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
+                <div class="footer-column"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="cars.html">Cars for Sale</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="import-services.html">Import Services</a></li><li><a href="finance-trade-in.html">Finance & Trade-In</a></li><li><a href="sell-your-car.html">Sell Your Car</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+                <div class="footer-column"><h3>Contact Us</h3><p><i class="fas fa-map-marker-alt"></i> Nairobi Office Location</p><p><i class="fas fa-phone"></i> <a href="tel:0707664166">0707664166</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:brandon.motors@outlook.com">brandon.motors@outlook.com</a></p><p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254707664166" target="_blank">WhatsApp Chat</a></p></div>
+                <div class="footer-column"><h3>Office Hours</h3><p>Mon–Sat: 8am–6pm</p><p>Sun: Closed</p></div>
+            </div>
+            <div class="footer-bottom"><p class="copyright">Copyright © 2025 Brandon Motors. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/254707664166" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+</html>

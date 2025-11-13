@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Brandon Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Specific styles for contact page */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 1.2em;
+        }
+        .contact-form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container input[type="tel"],
+        .contact-form-container textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+        .contact-form-container textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .map-container {
+            height: 400px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="index.html">Brandon Motors</a></div>
+            <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="cars.html">Cars for Sale</a></li><li><a href="import-services.html">Car Import Services</a></li><li><a href="finance-trade-in.html">Finance & Trade-In</a></li><li><a href="contact.html">Contact Us</a></li></ul></nav>
+            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <h1 class="text-center">Contact Brandon Motors</h1>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><i class="fas fa-phone"></i> Phone: <a href="tel:0799219777">0799219777</a></p>
+                        <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/254799219777" target="_blank">Click to Chat</a></p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:brandonkangethe@gmail.com">brandonkangethe@gmail.com</a></p>
+                        <p><i class="fas fa-clock"></i> Hours: Mon–Sat (8am–6pm), Sun (Closed)</p>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3>Send Us a Message</h3>
+                        <form action="#" method="POST">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="tel" name="phone" placeholder="Your Phone Number">
+                            <input type="text" name="car_of_interest" placeholder="Car of Interest (Optional)">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.816086762589!2d36.81722391475395!3d-1.2863899999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b2979242!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column"><h3>Brandon Motors</h3><p>Your Trusted Car Dealer in Kenya.</p><div class="social-links"><a href="https://facebook.com/brandonmotors" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com/brandonmotors" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com/brandonmotors" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
+                <div class="footer-column"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="cars.html">Cars for Sale</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="import-services.html">Import Services</a></li><li><a href="finance-trade-in.html">Finance & Trade-In</a></li><li><a href="sell-your-car.html">Sell Your Car</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+                <div class="footer-column"><h3>Contact Us</h3><p><i class="fas fa-map-marker-alt"></i> Two Rivers, Northern Bypass</p><p><i class="fas fa-phone"></i> <a href="tel:0799219777">0799219777</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:brandonkangethe@gmail.com">brandonkangethe@gmail.com</a></p><p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254799219777" target="_blank">WhatsApp Chat</a></p></div>
+                <div class="footer-column"><h3>Office Hours</h3><p>Mon–Sat: 8am–6pm</p><p>Sun: Closed</p></div>
+            </div>
+            <div class="footer-bottom"><p class="copyright">Copyright © 2025 Brandon Motors. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/254799219777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+</html>

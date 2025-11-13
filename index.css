@@ -1,0 +1,836 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #1a252f; /* Deep Charcoal Blue */
+    --secondary-color: #f8f9fa; /* Off-white */
+    --accent-color: #d4af37; /* Gold Accent */
+    --accent-color-dark: #b89b30;
+    --text-color: #495057;
+    --light-text-color: #FFFFFF;
+    --border-color: #EEEEEE;
+    --font-heading: 'Montserrat', sans-serif; /* More modern heading font */
+    --font-body: 'Open Sans', sans-serif; /* Clean body font */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: var(--secondary-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-dark);
+    border-color: var(--accent-color-dark);
+    color: var(--light-text-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: rgba(26, 37, 47, 0.8); /* Semi-transparent */
+    backdrop-filter: blur(10px);
+    color: var(--light-text-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo a {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light-text-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: var(--light-text-color);
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-social a {
+    color: var(--light-text-color);
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+.header-social a:hover {
+    color: var(--accent-color);
+}
+
+.header-contact-btn {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- Hero Banner --- */
+.hero-banner-container {
+    position: relative;
+    color: var(--light-text-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    min-height: 60vh;
+    padding: 60px 0;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.hero-content h1 {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--light-text-color); /* Ensure h1 inside hero is white */
+    margin-bottom: 0.5rem;
+}
+
+.hero-content .slogan {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.hero-pagination .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-pagination .swiper-pagination-bullet-active {
+    background: var(--accent-color);
+}
+
+/* --- Quick Search Bar --- */
+.quick-search-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 3;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+.quick-search-bar form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-search-bar select,
+.quick-search-bar input[type="text"],
+.quick-search-bar .btn-search {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.quick-search-bar .btn-search {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    flex-grow: 0;
+    padding: 12px 25px;
+}
+
+/* --- Featured Cars Section --- */
+.featured-cars h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Responsive Grid for Car Cards */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Basic CSS for Car Card */
+.car-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Animation final state */
+.car-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.car-link {
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.car-image-container {
+    width: 100%;
+    padding-top: 66.66%; /* 3:2 aspect ratio */
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.car-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85em;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.status-tag.available {
+    background-color: #28a745; /* Green */
+}
+
+.status-tag.sold {
+    background-color: var(--accent-color); /* Red */
+}
+
+.condition-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85em;
+    z-index: 2;
+    text-transform: uppercase;
+}
+.condition-tag.new {
+    background-color: #007bff; /* Blue for New */
+}
+.condition-tag.used {
+    background-color: #6c757d; /* Grey for Used */
+}
+
+.sold-banner {
+    position: absolute;
+    top: 20px;
+    left: -45px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 40px;
+    transform: rotate(-45deg);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-family: var(--font-heading);
+}
+
+.car-card.sold .car-image {
+    filter: grayscale(90%);
+}
+.car-card.sold .car-link {
+    pointer-events: none; /* Makes the card unclickable */
+}
+
+.car-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-model {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.car-year {
+    font-size: 0.9em;
+    color: #666;
+    font-weight: normal;
+}
+
+.car-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.car-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+}
+
+.spec-item i {
+    margin-right: 8px;
+    color: #888;
+    width: 16px;
+    text-align: center;
+}
+
+.enquire-button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.enquire-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+/* --- Why Choose Us Section --- */
+.why-choose-us {
+    text-align: center;
+}
+.why-choose-us h2 {
+    margin-bottom: 40px;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.feature-item {
+    text-align: center;
+}
+.feature-item .icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+    text-align: center;
+}
+.testimonial-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.testimonial-card .author {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* --- About Us Snippet --- */
+.about-main-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?q=80&w=2070') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* New class for consistent page headers */
+.page-header {
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    margin-bottom: 40px;
+}
+.page-header h1 {
+    color: var(--light-text-color);
+    font-size: 2.8rem;
+}
+
+/* --- Import CTA --- */
+.import-cta {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: #ccc;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    color: var(--light-text-color);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-column p, .footer-column li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column a {
+    color: #ccc;
+}
+
+.footer-column a:hover {
+    color: var(--accent-color);
+}
+
+.social-links a {
+    color: var(--light-text-color);
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid #444;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Cars Page Specific --- */
+.cars-page-container {
+    display: flex;
+    gap: 30px;
+}
+.filters-sidebar {
+    flex: 0 0 280px; /* Sidebar width */
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    align-self: flex-start; /* Prevents stretching */
+}
+.filter-group {
+    margin-bottom: 25px;
+}
+.filter-group h4 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.filter-option label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.btn-filter {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.btn-filter.active, .btn-filter:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-color: var(--accent-color);
+}
+.car-listings {
+    flex: 1;
+}
+
+/* --- Filter & Sort Bar on Cars Page --- */
+.filters-sort-bar {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+.filters-sort-bar form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.filters-sort-bar select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+/* --- Admin Page Styles --- */
+.admin-container h1 {
+    font-size: 2.5rem;
+}
+
+.admin-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.form-section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.admin-note {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .quick-search-bar form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .header-social, .header-contact-btn {
+        display: none; /* Hide on smaller tablets for simplicity */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+    }
+    .main-nav.active {
+        display: flex;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-nav li {
+        margin: 0;
+        text-align: center;
+    }
+    .main-nav a {
+        display: block;
+        padding: 1rem;
+    }
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content .slogan {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .cars-page-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}

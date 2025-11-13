@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Brandon Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Specific styles for car-details page */
+        .car-details-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .car-gallery {
+            flex: 2;
+            min-width: 300px;
+        }
+        .car-info {
+            flex: 1;
+            min-width: 280px;
+        }
+        .main-car-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 10px;
+        }
+        .thumbnail-gallery img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+        .thumbnail-gallery img:hover {
+            border-color: var(--accent-color);
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .specs-table th, .specs-table td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+        .specs-table th {
+            background-color: var(--secondary-color);
+            font-weight: 600;
+        }
+        .car-actions {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .social-share {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .social-share a {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        .social-share a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="index.html">Brandon Motors</a></div>
+            <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="cars.html">Cars for Sale</a></li><li><a href="import-services.html">Car Import Services</a></li><li><a href="finance-trade-in.html">Finance & Trade-In</a></li><li><a href="contact.html">Contact Us</a></li></ul></nav>
+            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <div class="car-details-section">
+                    <!-- Car Gallery -->
+                    <div class="car-gallery">
+                        <img src="images/placeholder.png" alt="Main car image" class="main-car-image" id="mainImage">
+                        <div class="thumbnail-gallery" id="thumbnailGallery">
+                            <!-- Thumbnails will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    <!-- Car Info -->
+                    <div class="car-info">
+                        <h1 id="carTitle">Car Model</h1>
+                        <div id="carStatus" class="status-tag" style="position: static; display: inline-block; margin-bottom: 15px;">Loading...</div>
+                        <p class="car-price" style="font-size: 2rem;" id="carPrice">KES 0</p>
+                        
+                        <table class="specs-table">
+                            <tbody>
+                                <tr><th>Year</th><td id="specYear">N/A</td></tr>
+                                <tr><th>Engine</th><td id="specEngine">N/A</td></tr>
+                                <tr><th>Transmission</th><td id="specTransmission">N/A</td></tr>
+                                <tr><th>Fuel Type</th><td id="specFuel">N/A</td></tr>
+                                <tr><th>Color</th><td id="specColor">N/A</td></tr>
+                                <tr><th>Condition</th><td id="specCondition">N/A</td></tr>
+                                <tr><th>Mileage</th><td id="specMileage">N/A</td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="car-actions">
+                            <a href="#" id="testDriveLink" class="btn btn-primary">Book a Test Drive</a>
+                            <a href="#" id="enquireLink" class="btn btn-secondary">Enquire Now</a>
+                            <a href="#" id="whatsappLink" target="_blank" class="btn btn-primary" style="background-color: #25d366;">WhatsApp Chat</a>
+                        </div>
+
+                        <div class="social-share">
+                            <span>Share:</span>
+                            <a href="#" id="shareWhatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" id="shareFacebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" id="shareInstagram" aria-label="Share on Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+
+                        <p style="margin-top: 20px;"><strong>Financing available</strong> with our partners. <a href="finance-trade-in.html">Learn more</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column"><h3>Brandon Motors</h3><p>Your Trusted Car Dealer in Kenya.</p><div class="social-links"><a href="https://facebook.com/brandonmotors" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com/brandonmotors" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com/brandonmotors" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
+                <div class="footer-column"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="cars.html">Cars for Sale</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="import-services.html">Import Services</a></li><li><a href="finance-trade-in.html">Finance & Trade-In</a></li><li><a href="sell-your-car.html">Sell Your Car</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+                <div class="footer-column"><h3>Contact Us</h3><p><i class="fas fa-map-marker-alt"></i> Two Rivers, Northern Bypass</p><p><i class="fas fa-phone"></i> <a href="tel:0799219777">0799219777</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:brandonkangethe@gmail.com">brandonkangethe@gmail.com</a></p><p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254799219777" target="_blank">WhatsApp Chat</a></p></div>
+                <div class="footer-column"><h3>Office Hours</h3><p>Mon–Sat: 8am–6pm</p><p>Sun: Closed</p></div>
+            </div>
+            <div class="footer-bottom"><p class="copyright">Copyright © 2025 Brandon Motors. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/254799219777" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Dynamic Car Data Loading ---
+            const API_BASE_URL = 'http://localhost:3000/api'; // Replace with your actual API URL
+
+            // Get car ID from the URL, e.g., car-details.html?id=1
+            const params = new URLSearchParams(window.location.search);
+            const carId = params.get('id');
+
+            if (!carId) {
+                document.querySelector('.car-details-section').innerHTML = '<h1>Car not found. Please select a car from our listings.</h1>';
+                return;
+            }
+
+            // Fetch car data from the API
+            fetch(`${API_BASE_URL}/cars/${carId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(car => {
+                    // Populate the page with the fetched data
+                    const carFullName = `${car.make} ${car.model} ${car.year}`;
+                    document.title = `${carFullName} - Brandon Motors`;
+
+                    document.getElementById('carTitle').textContent = carFullName;
+                    document.getElementById('carPrice').textContent = `KES ${new Intl.NumberFormat().format(car.price)}`;
+
+                    // Status tag
+                    const statusTag = document.getElementById('carStatus');
+                    statusTag.textContent = car.status;
+                    statusTag.className = `status-tag ${car.status.toLowerCase()}`;
+
+                    // Specs table
+                    document.getElementById('specYear').textContent = car.year;
+                    document.getElementById('specEngine').textContent = car.engine_size || 'N/A';
+                    document.getElementById('specTransmission').textContent = car.transmission;
+                    document.getElementById('specFuel').textContent = car.fuel_type || 'N/A';
+                    document.getElementById('specColor').textContent = car.color || 'N/A';
+                    document.getElementById('specCondition').textContent = car.condition;
+                    document.getElementById('specMileage').textContent = car.mileage ? `${new Intl.NumberFormat().format(car.mileage)} km` : 'N/A';
+
+                    // Gallery
+                    const mainImage = document.getElementById('mainImage');
+                    const thumbnailGallery = document.getElementById('thumbnailGallery');
+                    thumbnailGallery.innerHTML = ''; // Clear placeholders
+
+                    if (car.images && car.images.length > 0) {
+                        mainImage.src = car.images[0].image_url; // Set main image to the first one
+                        mainImage.alt = carFullName;
+
+                        car.images.forEach(image => {
+                            const img = document.createElement('img');
+                            img.src = image.image_url;
+                            img.alt = `${carFullName} thumbnail`;
+                            img.onclick = () => { mainImage.src = image.image_url; };
+                            thumbnailGallery.appendChild(img);
+                        });
+                    }
+
+                    // Action Buttons
+                    const encodedCarName = encodeURIComponent(carFullName);
+                    document.getElementById('testDriveLink').href = `contact.html?service=test-drive&car=${encodedCarName}`;
+                    document.getElementById('enquireLink').href = `contact.html?car=${encodedCarName}`;
+                    document.getElementById('whatsappLink').href = `https://wa.me/254799219777?text=Hi%20Brandon%20Motors,%20I%20saw%20the%20${encodedCarName}%20on%20your%20website.%20Is%20it%20still%20available%3F%20I'd%20love%20to%20get%20more%20details.`;
+                })
+                .catch(error => {
+                    console.error('Error fetching car details:', error);
+                    document.querySelector('.car-details-section').innerHTML = '<h1>Error loading car details. Please try again later.</h1>';
+                });
+        });
+    </script>
+</body>
+</html>
